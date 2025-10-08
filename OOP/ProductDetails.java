@@ -1,89 +1,89 @@
-/*Q1. Write a java program to create pojo class name as Product with a following properties like 
-as pid, pname, quantity and rate. create the another class name as Bill and this class is depend 
-on product but we want to pass more than one product details to Bill class so here we use the 
-var-args concept.
-- Calculate bill without Gst.
-- Calculate bill with 18% Gst.
-*/
-import java.util.*;
-class GST{
-	void getGst(Bill ... a){
-		
-		for(int i=0; i<a.length; i++){
-			
-			double billWithoutGst = a[i].getQuantity() * a[i].getRate();
-            double gstAmount = billWithoutGst * 0.18;
-            double billWithGst = billWithoutGst + gstAmount;
-			
-			System.out.println("Id: "+a[i].getId());
-			System.out.println("Name: "+a[i].getName());
-			System.out.println("bill without Gst: "+billWithoutGst);
-			System.out.println("bill with 18% Gst: "+billWithGst);
-		}
-	}
-}
-class Bill{
-	private int pid;
-	private String pname;
-	private int quantity;
-	private double rate;
-	
-	public void setId(int pid){
-		this.pid = pid;
-	}
-	public int getId(){
-		return pid;
-	}
-	
-	public void setName(String pname){
-		this.pname = pname;
-	}
-	public String getName(){
-		return pname;
-	}
-	
-	public void setQuantity(int quantity){
-		this.quantity = quantity;
-	}
-	public int getQuantity(){
-		return quantity;
-	}
-	
-	public void setRate(double rate){
-		this.rate = rate;
-	}
-	public double getRate(){
-		return rate;
-	}
-}
+/*Q4. Question:
+ Create a Java class Product with constructor overloading:
+First constructor takes productId, productName, and price.
+Second constructor takes productId, productName, price, and discountPercent.
+Perform the following:
+If discount is provided, calculate final price = price - (price × discount/100).
+If no discount is provided, keep price as is.
+If price > 5000, apply an extra 5% discount automatically.
+Explanation:
+ This question checks constructor overloading, percentage calculations, and nested logical operations in the constructor.*/
+ 
+ import java.util.*;
+ 
+ class product
+ {
+       int id;
+	   String name;
+       double price;
+	   int discount;
+	   
+	   //first Contructor.
+	   product(int id, String name, double price)
+	   {
+	     this.id = id;
+         this.name = name;
+         this.price  = price;		 
+	  
+	  if(price > 5000)
+	    {
+		  this.price = price - (price * 5/100);
+	    }
+	   }
+	   
+	   //Second Contructor.
+	   product(int id, String name , double price , int discount )
+	   {
+		 this.id = id;
+         this.name = name;
+         this.price = price;
+         this.discount = discount;	
 
-
-public class ProductDetails{
-	public static void main(String []args){
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Enter Array Size");
-		int n = sc.nextInt();
-		
-		Bill a[] = new Bill[n];
-		for(int i=0; i<a.length; i++){
-			a[i] = new Bill();
-			
-			System.out.println("\nEnter "+(i+1)+" id");
-			a[i].setId(sc.nextInt());
-			
-			sc.nextLine();
-			System.out.println("Enter Name");
-			a[i].setName(sc.nextLine());
-			
-			System.out.println("Enter quantity");
-			a[i].setQuantity(sc.nextInt());
-			
-			System.out.println("Enter rate");
-			a[i].setRate(sc.nextDouble());
-		}
-		GST g = new GST();
-		g.getGst(a);		
-	}
+         double discountPrice = price -(price * discount/100);
+ 
+         if(discountPrice >5000)
+		 {
+			 discountPrice = discountPrice -(discountPrice * 5/100);
+		 }	
+          this.price = discountPrice;		 
+	   }	   
+	   
+	
+	   
+	  void display()
+	   {
+		   System.out.println("ID : " + id);
+		   System.out.println("Name :" + name);
+		   System.out.println("Price :" + price);
+		   System.out.println("Discount :" + discount + "%");
+		      
+	   }
+	  
+  }
+public class ProductDetails
+{
+   public static void main(String []args)
+   {
+      Scanner sc = new Scanner(System.in);
+	  System.out.println("Enter Product Details");
+	  
+	  System.out.println("Ente id :");
+	  int id = sc.nextInt();
+	  sc.nextLine();
+	  
+	  
+	  System.out.println("Enter Name :");
+	  String name = sc.nextLine();
+	  
+	  
+	  System.out.println("Enter Price :");
+	  double price = sc.nextDouble();
+	  
+	  System.out.println("Enter Discount :");
+	  int discount = sc.nextInt();
+	 
+	  
+	  product p = new product(id,name , price, discount);
+	  p.display();
+   }
 }
-

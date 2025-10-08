@@ -1,88 +1,56 @@
-/*Q.1
-Simple Calculator Using Inheritance
-Create a base class Operation with two numbers. Create subclasses for:
-Addition
-Subtraction
-Multiplication
-Division
-Each subclass overrides a method calculate() and performs respective operations.*/
+/*Q.4
+ Create a class Calculator with two integers a and b.
+Requirements:
+Method setValues() to assign numbers.
+Methods: add(), subtract(), multiply(), and divide().
+_________________________________ */
 
 import java.util.*;
-class Calculate
-{
-  int x,y;
-  
-  void setValue(int x, int y)
-  {
-     this.x = x;
-	 this.y = y;
-  }
-}
-class Add extends Calculate
-{
-   int getAdd()
-   {
-      return x+y;
-   }
-}
-class Sub extends Calculate
-{
-   int getSub()
-   {
-      return x-y;
-   }
-}
-class Mul extends Calculate
-{
-  int getMul()
-  {
-     return x*y;
-  }
-}
-class Div extends Calculate
-{
-   int getdiv()
-   {
-      return x/y;
-   }
-}
-public class Calculator
-
-{
-  public static void main(String []args)
-  {
-	 Scanner sc = new Scanner(System.in);
+class calValues
+{  
+    int First;
+	int Second;
+	
+	
+	 void setValues(int x ,int y)
+	 {
+		 First  = x;
+		 Second  = y;
+	 }
 	 
-     Add s1 = new Add();
-	 System.out.println("Enter Two Number : ");
-	 int x = sc.nextInt();
-	 int y = sc.nextInt();
-	  s1.setValue(x,y);
-	  
-	  int result = s1.getAdd();
-	  System.out.println("Addition is : " + result);
-	  
-	  Sub s2 = new Sub();
-	  s2.setValue(10,10);
-	  result = s2.getSub();
-	  System.out.println("Subtraction is :" + result);
-	  
-	  Mul s3 = new Mul();
-	  s3.setValue(10,10);
-	  result = s3.getMul();
-	  System.out.println("Multiplication is : " + result);
-	  
-	  Div s4 = new Div();
-	  s4.setValue(100,10);
-	  result  = s4.getdiv();
-	  System.out.println("Division  is : " + result);
-  }
-  
+	 void getDisplay()
+	 {
+		 System.out.println("Addition is = " + (First+ Second));
+		 System.out.println("Substaction is = " + (First- Second));
+		 System.out.println("Multiplcation is = "+ (First*Second));
+		 System.out.println("Divide = " + (First/Second));
+	 }
+}
+
+public class Calculator
+{
+	public static void main(String[]args)
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter First number");
+		int x = sc.nextInt();
+		
+		System.out.println("Enter Second number");
+		int y = sc.nextInt();
+		
+		calValues s1 = new calValues();
+		s1.setValues(x,y);
+		s1.getDisplay();
+	}
+	
 }
 /*
 output:
-Addition is : 30
-Subtraction is :0
-Multiplication is : 100
-Division  is : 10
-*/
+Enter First number
+12
+Enter Second number
+10
+Addition is = 22
+Substaction is = 2
+Multiplcation is = 120
+Divide = 1   */
