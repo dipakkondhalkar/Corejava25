@@ -1,97 +1,66 @@
-/*Q1. Store and Sort Student Marks
-Create a Student class with fields: name and marks.
-Store multiple students in an ArrayList.
-Sort them by marks using Comparable.
-Print the sorted list.
- Explanation:
- This tests your ability to:
-Implement Comparable<Student> for sorting.
-Use Collections.sort(list) on an ArrayList of objects.*/
+/*Q12. Create a program that stores student names as keys and their marks as values. Perform the following operations:
+Insert 5 students with marks.
+Update marks of one student.
+Remove one student.
+Display all students with marks greater than 60.
+Explanation:
+Demonstrates insert, update, delete, and filtering using Map.
+entrySet() helps in iteration for filtering.*/
 
 import java.util.*;
-class Student implements Comparable
-{
-   private String name;
-   private int marks;
-   
-   public Student()
-   {
-   }
-   public Student(String name,int marks)
-   {
-     this.name = name;
-	 this.marks = marks;
-   }
-   public void setname(String name)
-   {
-      this.name = name;
-	  
-   }
-   public String getname()
-   {
-     return name;
-   }
-   public void setmarks(int marks)
-   {
-      this.marks = marks;
-   }
-   public int getmarks()
-   {
-      return marks;
-   }
-   public int compareTo(Object o)
-   {
-	   Student s = (Student)o;
-	   if(this.marks > s.marks)
-	   {
-		   return 1;
-	   }
-	   else if(this.marks < s.marks)
-	   {
-		  return -1;
-	   }
-	   else
-	   {
-		   return 0;
-	   }
-   }
-}
 public class StudentData
 {
-  public static void main(String[]args)
-  {
-    Scanner sc = new Scanner(System.in);
-	List list = new ArrayList();
+ public static void main(String x[])
+ {
+   Scanner xyz = new Scanner(System.in);
+   
+   LinkedHashMap<String,Integer> sm = new LinkedHashMap<>();
+   
+   System.out.println("Enter the Names and Marks Of Students");
+   for(int i=0;i<5;i++)
+   {
+	String a = xyz.nextLine();
+	int k = xyz.nextInt();
+	xyz.nextLine();
+    sm.put(a,k);
+   }
+   
+   System.out.println("Original Data");
+   Set<Map.Entry<String,Integer>> m =sm.entrySet();
+   for(Map.Entry<String,Integer> s:m)
+   {
+	   System.out.println(s.getKey()+"---->"+s.getValue());
+   }
+
+   
+   System.out.println("Enter the Names of Student and new Marks to update");
+   String nm = xyz.nextLine();
+   int mm = xyz.nextInt();
+   xyz.nextLine();
+   sm.put(nm,mm);
+
+   
+   System.out.println("Enter the Names of student to remove");
+   String rn = xyz.nextLine();
+   sm.remove(rn);
+    
+    
 	
-	  list.add(new Student("Deep ",91));
-	  list.add(new Student("Vijay",89));
-	  list.add(new Student("ram",94));
-	  list.add(new Student("ramesh",99));
-	  list.add(new Student("pranav",71));
-	  
-	 System.out.println("Display Employee Data Before Sorting : ");
-	 for(Object obj:list) {
-			Student s=(Student)obj;
-			System.out.println("\t"+s.getname()+"\t"+s.getmarks());
-		}
-		Collections.sort(list);
-		System.out.println("Display employee data After sorting");
-		for(Object obj:list) {
-			Student s=(Student)obj;
-			System.out.println("\t"+s.getname()+"\t"+s.getmarks());
-		}
-	}
+	System.out.println("Data After Updating and removing students marks ");
+	
+   Set<Map.Entry<String,Integer>> md =sm.entrySet();
+   for(Map.Entry<String,Integer> s:md)
+   {
+	   System.out.println(s.getKey()+"---->"+s.getValue());
+   }
+	
+	System.out.println("Marks Greater than 60 are ");
+	 Set<Map.Entry<String,Integer>> mf =sm.entrySet();
+   for(Map.Entry<String,Integer> s:mf)
+   {
+	   if(s.getValue()>60)
+	   System.out.println(s.getKey()+"---->"+s.getValue());
+   }
+	
+ }
 }
-output:
-Display Employee Data Before Sorting :
-        Deep    91
-        Vijay   89
-        ram     94
-        ramesh  99
-        pranav  71
-Display employee data After sorting
-        pranav  71
-        Vijay   89
-        Deep    91
-        ram     94
-        ramesh  99 
