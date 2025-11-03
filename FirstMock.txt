@@ -1,0 +1,227 @@
+  Q 1. Write a java program to display message  "This is first java program".
+	
+	Q 2. Write a java program to input all basic data types and print its output.
+	
+	Example :-
+	Input :-   int a=2 ;              
+					char ch='A' ;
+					float f=3.14f;
+					double d=2.34647;
+					long b=1234545;
+	
+	Output:-	    a=2 ;              
+					    ch='A' ;
+					    f=3.14f;
+					    d=2.34647;
+					    b=1234545;
+					 
+						
+	Q 3. Write a java program to enter two numbers and perform all arithmetic operations.
+	
+	Q 4. Write a java program to enter length and breadth of a rectangle and find its area.
+	
+	Formula -  area= length * breadth;
+	 
+	Q 5. Write a java program to enter radius of a circle and find its diameter,area and circumference.
+	 Formula :-
+						diameter=2 * radius;
+						circumference = 2 * 3.14 * radius;
+	
+					area = 3.14 * radius * radius;
+
+	Q1. Write a java program to enter length in centimeter and convert into meter and kilometer.
+	
+	Q2. Write a java program to enter temperature in Fahrenheit and convert to Celsius.
+	
+	Formula :- 
+	cel = (fah - 32) * 5 / 9;
+	
+	Q3. Write a java program to enter temperature in Celsius and convert it into Fahrenheit.
+	
+	Formula :-  
+	 fah = (cel * 9 / 5) + 32;
+	
+	Q4. Write a java program to calculate the simple intrest.
+	
+	Q5. Write a java program to calculate the compound intrest.
+	
+	Note :- All questions to take input from command line arguments & Scanner Class..
+
+Q1.Write a java program to enter two angles of a triangle and find the third angle.
+
+	Q2.Write a java program to enter base and height of a triangle and find its area.
+
+	Q3.Write a java program to calculate area of an equilateral triangle.
+
+	Q4.Write a java program to enter marks of five subjects and calculate total marks and percentage.
+	
+	Q5. Write a java program swap two number using third variable.
+	
+	Q6. Write a java program swap two number without using third variable. 
+	
+	Note : All Questions Solve Command line arguments & scanner class.
+
+Q1. Write a program to check whether number is positive or negative.
+	
+	Q2. Write a program to check whether number is even or odd.
+	
+	Q3. Write a program to check whether a number is divisible by 5 and 11 or not.
+	
+	Q4. Write a program to check whether charcter is alpbhabet or not.
+	
+	Q5. Write a program to input cost price and selling price of a product and check profit or loss. 
+	
+	Note :- Using Scanner Class & Conditional operator.
+
+
+Q1. Write a Java program to print the ASCII value of a given character.
+	
+	Q2. Write a Java program to convert seconds to hours, minutes and seconds. 
+	
+	Q3. Write a Java program that reads a number and display the cube. 
+	
+	Q4. Write a Java program and compute the sum of an integer's digits.
+			Input : 123
+			Output : 6
+		
+	Q5.  Write a Java program to reverse a number without using loop.
+			Input a number: 123
+			Reverse number: 321
+		
+		Note : All Questions Solved Are Using Scanner Class...
+
+
+Q1. Write a java program to check whether triangle is equilateral , isoscale  or scalene.
+
+	Q2.Write a java program to check whether number is even or odd.
+
+	Q3.Write a java program to check whether triangle is valid or not.
+
+	Q4. Write a java program to find maximum between two numbers.
+	
+        Q5. Write a java program to check whether a character is uppercase or lowercase alphabet.
+
+
+
+Q1. Write a java program to input any alphabet and check whether it is vowel or consonant.
+	
+    Q2. Write a program to find first and last digit of a number without using loop in three digit.
+	
+    Q3. Write a program to calculate sum of first and last digit of a number without using loop.
+			Input : 123
+			Output : 4
+   
+    Q4. Write a java program to check whether a year is leap year or not.
+	
+    Q5. Write a java program to input any character and check whether it is alphabet, digit or special character.
+	
+     Q6. Write a java program to find maximum between three numbers.
+	  
+    Q7. Write a java program to read the age of a candidate and determine whether he is eligible to cast his/her own vote. 
+
+    Q8. Write a java program to accept two integers and check whether they are equal or not. 
+	
+	Note : Using Conditional & Ternary Operator
+
+
+Q1. Write a program to find maximum between two numbers.
+	
+    Q2. Write a program to find maximum between three numbers.
+	
+    Q3. Write a program to check whether a number is divisible by 5 and 11 or not.
+   
+    Q4. Write a program to check whether a year is leap year or not.
+    
+    Q5. Write a program to input any alphabet and check whether it is vowel or consonant.
+	
+    Q6. Write a program to input any character and check whether it is alphabet, digit or special character.
+	
+    Q7. Write a program to check whether a character is uppercase or lowercase alphabet.
+  
+    Q8. Write a program to input cost price and selling price of a product and check profit or loss. 
+	
+    Q9. Write a program to check whether triangle is equilateral , isoscale  or scalene.
+
+    Q10.Write a program check whether number is positive , negative or zero.
+	
+    Note : All Questions Solved using if else.
+
+
+
+Q1.Write a java program to find total number of notes in given amount. 	
+		
+		Enter the amount: 2528
+
+		Expected output:
+
+		500=5
+		100=0
+		50=0
+		20=1
+		10=0
+		5=1
+		2=1
+		1=1
+		
+	Q2. Write a java program to input basic salary of an employee and calculate its Gross salary according to following:
+		Basic Salary <= 10000 : HRA = 20%,  DA =  80%
+		Basic Salary <= 20000 : HRA = 25%, DA = 90%
+		Basic Salary > 20000 : HRA = 30%,  DA =    95%
+	
+	Q3.Write a java program to accept the height of a person in centimeters and categorize the person according 
+		to their height.
+
+		PerHeight < 150.0  : The person is Dwarf.
+			  
+		PerHeight >= 150.0 && PerHeight < 165.0  :   The person is  average heighted. 
+			
+		 PerHeight >= 165.0 && PerHeight <= 195.0 :  The person is taller.
+
+		Test Data : 135
+
+		Expected Output :
+
+		The person is Dwarf.
+		
+	Q4. Write a java program to input marks of five subjects Physics, Chemistry, Biology, 
+	    Mathematics and Computer, calculate percentage and grade according to given conditions:
+		percentage >= 90% : Grade A
+		percentage >= 80% : Grade B
+		percentage >= 70% : Grade C
+		percentage >= 60% : Grade D
+		percentage >= 40% : Grade E
+		percentage < 40% : Grade F	
+		
+	Q5. Write a java program to read the age of a candidate and determine whether he is eligible to cast his/her own vote.
+
+
+Q1. Check whether a given employee is eligible for bonus:
+
+Input: Years of service and salary.
+Logic: If service > 5 years, give 5% bonus.
+Output: Display bonus amount or no bonus.
+
+Q2. Check if a person is a child, teenager, adult, or senior based on age.
+
+    Input: Age
+    Logic: if-else if
+    Output: Age category.
+	
+Q3. Compare two numbers: greater, smaller, or equal.
+
+    Input: Two integers
+    Logic: if-else if
+    Output: Greater, smaller, or equal.
+	
+Q4. Check whether the month number is valid and display season.
+
+    Input: 1 to 12
+    Logic: if-else if to map to Winter/Spring/Summer/Autumn.
+    Output: Season.
+	
+Q5. Check whether a student is eligible for scholarship:
+
+    Attendance >= 75% and marks >= 80**
+    Input: Attendance %, marks
+    Logic: if-else
+    Output: Eligible or not.

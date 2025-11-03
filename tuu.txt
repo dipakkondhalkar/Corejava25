@@ -1,0 +1,384 @@
+Here is the **detailed solution to all 28 Java interview questions**, written in a professional, deep, and interview-ready manner.
+
+---
+
+# ✅ Java Interview Questions with Detailed Answers
+
+---
+
+## 1️⃣ **What is Java and Why is it Platform-Independent?**
+
+* **Java** is a **high-level, object-oriented, secure, and portable** programming language developed by **Sun Microsystems (now owned by Oracle)**.
+
+* Java achieves **platform independence** through the use of the **Java Virtual Machine (JVM)**. The process is:
+
+  * Java source code (`.java`) → compiled into **bytecode** (`.class`).
+  * **Bytecode** is platform-independent.
+  * Any device with a **JVM** can interpret this bytecode into machine-specific code.
+
+✔️ This feature is known as **“Write Once, Run Anywhere (WORA)”**.
+
+---
+
+## 2️⃣ **Difference Between JDK, JRE, and JVM**
+
+| Component | Description              | Contains                       | Purpose                                            |
+| --------- | ------------------------ | ------------------------------ | -------------------------------------------------- |
+| **JVM**   | Java Virtual Machine     | Bytecode Interpreter           | Executes bytecode on any platform                  |
+| **JRE**   | Java Runtime Environment | JVM + Libraries                | Environment to run Java apps                       |
+| **JDK**   | Java Development Kit     | JRE + Compiler (javac) + Tools | Environment to develop, compile, and run Java apps |
+
+* **JVM** is platform-dependent.
+* **Bytecode** is platform-independent.
+
+---
+
+## 3️⃣ **Main Features of Java**
+
+* ✅ **Simple** — Easy syntax, easy to learn.
+* ✅ **Object-Oriented** — Follows OOP concepts (Class, Object, Inheritance, etc.).
+* ✅ **Platform-Independent** — Runs on any OS via JVM.
+* ✅ **Secure** — No explicit pointers, sandbox environment, bytecode verification.
+* ✅ **Robust** — Strong memory management, garbage collection, exception handling.
+* ✅ **Multithreaded** — Supports concurrent execution (threads).
+* ✅ **Portable** — Code runs across systems without modifications.
+* ✅ **High Performance** — Just-In-Time (JIT) Compiler improves execution speed.
+* ✅ **Dynamic & Distributed** — Supports dynamic linking and distributed computing.
+
+---
+
+## 4️⃣ **Structure of a Basic Java Program**
+
+```java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+    }
+}
+```
+
+### Components:
+
+* **Class Declaration:** `public class Hello`
+* **Main Method:** `public static void main(String[] args)`
+* **Output Statement:** `System.out.println("Hello, Java!");`
+
+---
+
+## 5️⃣ **Role of main() Method in Java**
+
+* It is the **entry point** for Java applications.
+* JVM starts program execution from:
+
+```java
+public static void main(String[] args)
+```
+
+Without it, JVM cannot start the program.
+
+---
+
+## 6️⃣ **Compile and Run Java from Command Line**
+
+1. Write code in `Hello.java`.
+2. Compile:
+
+```bash
+javac Hello.java
+```
+
+→ Produces `Hello.class`.
+
+3. Run:
+
+```bash
+java Hello
+```
+
+---
+
+## 7️⃣ **What is a Variable? Types in Java**
+
+A **variable** is a **named memory location** that stores data.
+
+### Types:
+
+1. **Local Variable:** Declared inside methods; scope is limited to that method.
+2. **Instance Variable:** Declared inside class but outside methods; unique to each object.
+3. **Static Variable:** Declared with `static`; shared among all objects of the class.
+
+---
+
+## 8️⃣ **Data Types in Java**
+
+### 🔹 **Primitive Data Types:**
+
+| Type    | Size   | Example |
+| ------- | ------ | ------- |
+| byte    | 1 byte | 127     |
+| short   | 2 byte | 32000   |
+| int     | 4 byte | 1234    |
+| long    | 8 byte | 123456L |
+| float   | 4 byte | 3.14f   |
+| double  | 8 byte | 3.14159 |
+| char    | 2 byte | 'A'     |
+| boolean | 1 bit  | true    |
+
+### 🔸 **Non-Primitive Data Types:**
+
+* String
+* Array
+* Class
+* Interface
+* Enum
+
+---
+
+## 9️⃣ **Primitive vs Non-Primitive**
+
+| Primitive                    | Non-Primitive                |
+| ---------------------------- | ---------------------------- |
+| Stores simple values         | Stores object references     |
+| Fast and memory-efficient    | Can store complex structures |
+| Fixed size                   | Can grow dynamically         |
+| Examples: int, char, boolean | Examples: String, Array      |
+
+---
+
+## 🔟 **Type Casting in Java**
+
+* **Type Casting:** Converting one data type into another.
+
+### Types:
+
+1. **Widening (Implicit):** Smaller → Larger (Safe)
+
+   ```java
+   int a = 10;
+   double b = a;
+   ```
+2. **Narrowing (Explicit):** Larger → Smaller (Unsafe)
+
+   ```java
+   double a = 10.5;
+   int b = (int) a; // b = 10
+   ```
+
+---
+
+## 1️⃣1️⃣ **Operators in Java with Examples**
+
+* **Arithmetic:** `+ - * / %` → `a + b`
+* **Relational:** `== != > < >= <=` → `a > b`
+* **Logical:** `&& || !` → `(a > b) && (b > c)`
+* **Assignment:** `= += -= *= /=` → `a += 2`
+* **Unary:** `++ -- !` → `a++`
+* **Bitwise:** `& | ^ << >>` → `a & b`
+* **Ternary:** `? :` → `(a > b) ? a : b`
+
+---
+
+## 1️⃣2️⃣ **Precedence and Associativity**
+
+### Precedence (High → Low):
+
+1. ()
+2. ++, --
+3. \*, /, %
+4. +, -
+5. <, >, <=, >=
+6. \==, !=
+7. &&
+8. ||
+9. \=, +=, -=
+
+### Associativity:
+
+* **Left to Right:** Most operators.
+* **Right to Left:** Assignment (`=`, `+=`) and Ternary (`?:`).
+
+---
+
+## 1️⃣3️⃣ **Increment & Decrement Example**
+
+```java
+int a = 5;
+System.out.println(a++);  // Output: 5 (Then a becomes 6)
+System.out.println(++a);  // Output: 7 (a was 6, increment first)
+```
+
+---
+
+## 1️⃣4️⃣ **Can We Run Java Without main()?**
+
+* No, from **Java 7 onwards**, `main()` is mandatory.
+* Earlier versions allowed execution via static blocks, but not anymore.
+
+---
+
+## 1️⃣5️⃣ **Why is main() Static?**
+
+* The `main()` method is **static** because JVM can invoke it **without creating an object of the class.**
+
+---
+
+## 1️⃣6️⃣ **If main() is Not Static?**
+
+* JVM throws an error:
+
+```
+Error: Main method is not static in class
+```
+
+✔️ JVM cannot invoke non-static methods without creating an object.
+
+---
+
+## 1️⃣7️⃣ **Command-Line Arguments Example**
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        System.out.println(args[0]);
+    }
+}
+```
+
+* Run:
+
+```bash
+java Test Hello
+```
+
+✔️ Output: `Hello`
+
+---
+
+## 1️⃣8️⃣ **Purpose of if Statement**
+
+* **if statement** is used to execute a block if the condition is true.
+
+### Example:
+
+```java
+if (marks >= 40) {
+    System.out.println("Pass");
+}
+```
+
+---
+
+## 1️⃣9️⃣ **Difference Between if, if-else, if-else-if**
+
+| Statement      | Purpose                                  |
+| -------------- | ---------------------------------------- |
+| **if**         | Checks one condition                     |
+| **if-else**    | Two-way decision                         |
+| **if-else-if** | Multiple conditions chain (like grading) |
+
+---
+
+## 2️⃣0️⃣ **Nested if Example**
+
+```java
+if (age >= 18) {
+    if (citizen) {
+        System.out.println("Eligible to vote");
+    }
+}
+```
+
+---
+
+## 2️⃣1️⃣ **Switch Syntax Example**
+
+```java
+int day = 3;
+switch(day) {
+    case 1: System.out.println("Monday"); break;
+    case 2: System.out.println("Tuesday"); break;
+    case 3: System.out.println("Wednesday"); break;
+    default: System.out.println("Invalid");
+}
+```
+
+---
+
+## 2️⃣2️⃣ **Switch Rules**
+
+* Expression must be:
+
+  * byte, short, char, int, String (Java 7+), enum (Java 5+).
+* `case` values must be constants.
+* Use `break` to prevent fall-through.
+
+---
+
+## 2️⃣3️⃣ **Data Types in Switch**
+
+* Allowed types:
+
+  * `byte`, `short`, `char`, `int`, `enum`, `String`.
+
+---
+
+## 2️⃣4️⃣ **If Break Missing in Switch?**
+
+* Fall-through occurs; all subsequent cases execute until a `break` or end.
+
+### Example:
+
+```java
+switch(2) {
+    case 1: System.out.println("One");
+    case 2: System.out.println("Two");
+    case 3: System.out.println("Three");
+}
+```
+
+✔️ Output: `Two Three`
+
+---
+
+## 2️⃣5️⃣ **if-else vs switch**
+
+| if-else                            | switch                             |
+| ---------------------------------- | ---------------------------------- |
+| Works with conditions, ranges      | Works with discrete values         |
+| Can use >, <, logical operators    | Cannot use relational operators    |
+| Flexible but slower for many cases | Faster for multiple discrete cases |
+
+---
+
+## 2️⃣6️⃣ **Ternary Operator Example**
+
+```java
+int a = 10, b = 20;
+int max = (a > b) ? a : b;
+System.out.println("Max is: " + max);
+```
+
+---
+
+## 2️⃣7️⃣ **Decision-Making Statements in Java**
+
+* `if`
+* `if-else`
+* `if-else-if ladder`
+* `nested if`
+* `switch`
+* `ternary operator (? :)`
+
+---
+
+## 2️⃣8️⃣ **Difference Between if and switch**
+
+| if                              | switch                           |   |                              |
+| ------------------------------- | -------------------------------- | - | ---------------------------- |
+| Works with conditions, ranges   | Works with exact matches         |   |                              |
+| Supports logical operators (&&, |                                  | ) | No logical operators allowed |
+| Flexible for complex conditions | Cleaner for many discrete values |   |                              |
+
+---
+
+# ✅ **If You Want, I Can Also Convert This into a Beautiful PDF for You. Shall I?**
